@@ -25,19 +25,17 @@ jobs:
           --password "$SVN_PASSWORD" \
           --no-auth-cache
 
-        svn update svn-repo/trunk --set-depth infinity
+        cd svn-repo
 
-        rsync -av --delete \
+        svn mkdir "${VERSION}"
+
+        rsync -av \
           --exclude=".git" \
           --exclude=".github" \
           --exclude="svn-repo" \
-          ./ svn-repo/trunk/
+          ../ "${VERSION}/"
 
-        svn copy "svn-repo/trunk" "svn-repo/tags/${VERSION}"
-
-        cd svn-repo
-        svn add --force .
-        svn status | grep '^\!' | awk '{print $2}' | xargs -r svn delete
+        svn add --force "${VERSION}/"
         svn commit \
           -m "Version ${VERSION}" \
           --username "$SVN_USERNAME" \

@@ -3,7 +3,7 @@ Contributors: ayecode, stiofansisland
 Tested up to: 7.0
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 2.0.10
+Version: 2.0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,7 +47,7 @@ Real Estate Listings is developed and maintained by AyeCode Ltd, the team behind
 
 == Changelog ==
 
-= 2.0.10 - 2026-06-09 =
+= 2.0.11 - 2026-06-09 =
 * Theme Description updated - CHANGED
 * Tested to version bumped - CHANGED
 
