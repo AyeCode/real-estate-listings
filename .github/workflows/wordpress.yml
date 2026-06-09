@@ -1,0 +1,45 @@
+name: Deploy to WordPress.org
+on:
+  push:
+    tags:
+    - "*"
+jobs:
+  tag:
+    name: New tag
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Install SVN
+      run: sudo apt-get update && sudo apt-get install -y subversion
+    - name: WordPress Theme Deploy
+      env:
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SLUG: real-estate-listings
+      run: |
+        VERSION=$(grep -oP "Version:\s*\K[^\s]+" style.css)
+
+        svn checkout "https://themes.svn.wordpress.org/${SLUG}/" svn-repo \
+          --depth immediates \
+          --username "$SVN_USERNAME" \
+          --password "$SVN_PASSWORD" \
+          --no-auth-cache
+
+        svn update svn-repo/trunk --set-depth infinity
+
+        rsync -av --delete \
+          --exclude=".git" \
+          --exclude=".github" \
+          --exclude="svn-repo" \
+          ./ svn-repo/trunk/
+
+        svn copy "svn-repo/trunk" "svn-repo/tags/${VERSION}"
+
+        cd svn-repo
+        svn add --force .
+        svn status | grep '^\!' | awk '{print $2}' | xargs -r svn delete
+        svn commit \
+          -m "Version ${VERSION}" \
+          --username "$SVN_USERNAME" \
+          --password "$SVN_PASSWORD" \
+          --no-auth-cache
