@@ -13,8 +13,8 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y subversion
     - name: WordPress Theme Deploy
       env:
-        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD_AYECODE }}
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME_AYECODE }}
         SLUG: real-estate-listings
       run: |
         VERSION=$(grep -oP "Version:\s*\K[^\s]+" style.css)
