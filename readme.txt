@@ -3,49 +3,19 @@ Contributors: ayecode, stiofansisland
 Tested up to: 7.0
 Requires at least: 6.1
 Requires PHP: 7.2
-Version: 2.0.12
+Version: 2.0.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Real Estate is a unique theme concept, for WordPress.org. With Real Estate Theme you can easily create an online real estate portal and submit your property listings.
+Real Estate is a unique theme concept for WordPress.org. With the Real Estate Theme, you can easily create an online real estate portal and submit your property listings.
 
 == Description ==
-Real Estate Listings is a free WordPress block theme built specifically for real estate
-listing sites, property directories, and rental platforms. It's a child theme of BlockStrap
-and pairs with the GeoDirectory plugin to handle the actual listing data, search, maps,
-and submission flow.
-
-The theme is designed around the 10 built-in real estate custom fields that ship with
-GeoDirectory (bedrooms, bathrooms, price, property type, and so on). For sites that need
-real estate-specific functionality beyond that, the free Real Estate Directory addon plugin
-adds three specialized blocks that the theme is built to display: a Mortgage Calculator
-that can pull property prices directly from the listing being viewed, an Energy Rating
-Chart in either EU or US format, and a Walk Score block that pulls walkability data based
-on listing location. The same addon adds two more custom fields, Property Energy Rating
-and Virtual Tour URL, which render through the standard GD Post Meta block.
-
-Built on the Bootstrap-based BlockStrap framework, the theme outputs clean HTML, loads
-fast on regular WordPress hosting, and works with the WordPress Site Editor for full
-template customization. No page builder license required, no recurring fees, no IDX or
-MLS lock-in.
-
-The theme is suitable for solo real estate agents building personal brand sites,
-brokerages running multi-agent listing platforms, property directory operators, rental
-site owners, and commercial real estate listings. Listings can be added manually through
-WordPress admin, in bulk via CSV import, or through a front-end submission form so
-property owners and agents can add their own listings without needing WordPress admin
-access.
-
-Required: GeoDirectory plugin (free, available in the WordPress plugin directory) and
-the BlockStrap parent theme (free, available in the WordPress theme directory). The Real
-Estate Directory addon plugin (free, available in the WordPress plugin directory) is
-recommended for the full real estate feature set, and the AyeCode Connect plugin (free)
-is recommended for one-click demo import. Requires WordPress 6.1 or later and PHP 7.2
-or later.
-
-Real Estate Listings is developed and maintained by AyeCode Ltd, the team behind the GeoDirectory directory plugin and the BlockStrap framework. The theme is part of a broader directory-focused WordPress ecosystem covering business directories, restaurant directories, classified ads, and other listing-based site types.
+Real Estate Listings is a free WordPress block theme built specifically for real estate listing sites, property directories, and rental platforms. It's a child theme of BlockStrap and pairs with the GeoDirectory plugin to handle listing data, search, maps, and submission flow. The theme works with the 10 built-in real estate custom fields that ship with GeoDirectory, including bedrooms, bathrooms, price, property type, property area, and more. For real-estate-specific functionality, the free Real Estate Directory addon adds three specialized blocks: a Mortgage Calculator that pulls property prices directly from the listing, an Energy Rating Chart in EU or US format, and a Walk Score block. The same addon adds Property Energy Rating and Virtual Tour URL fields. Built on the Bootstrap-based BlockStrap framework, the theme outputs clean HTML, loads fast on regular WordPress hosting, and works with the WordPress Site Editor for full template customization. No page builder license required, no recurring fees, no IDX or MLS lock-in. Suitable for solo real estate agents building personal brand sites, brokerages running multi-agent platforms, property directory operators, rental site owners, and commercial real estate listings. Listings can be added manually through WordPress admin, in bulk via CSV import, or through a front-end submission form so property owners and agents can add their own listings. Required: GeoDirectory plugin and BlockStrap parent theme, both free in the WordPress plugin directory. The Real Estate Directory addon is recommended for the full feature set.
 
 == Changelog ==
+
+= 2.0.13 - 2026-06-11 =
+* Theme Description updated - CHANGED
 
 = 2.0.12 - 2026-06-09 =
 * Theme Description updated - CHANGED
